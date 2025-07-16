@@ -1,16 +1,24 @@
 void setup() {
   pinMode(13, OUTPUT);
   pinMode(14, OUTPUT);
+  pinMode(7, INPUT_PULLUP);
 }
 
-void loop() {
+  void loop() {
+  int tombol = digitalRead(7); // Baca status tombol
+  if (tombol == LOW) { // Jika tombol ditekan
   digitalWrite(13, HIGH); // LED nyala
   delay(500);            // tunggu 1 detik
-  digitalWrite(13, LOW);  // LED mati
+  digitalWrite(14, LOW);  // LED mati
   delay(500);
 
-  digitalWrite(14, LOW); // LED mati
+  digitalWrite(13, LOW); // LED mati
   delay(500);            // tunggu 1 detik
-  digitalWrite(14, LOW); // LED mati
+  digitalWrite(14, HIGH); // LED nyala
   delay(500);            // tunggu 1 detik
+
+ } else {
+    digitalWrite(13, LOW); // Matikan LED 1
+    digitalWrite(14, LOW); // Matikan LED 2
 }
+    }
