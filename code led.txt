@@ -1,5 +1,6 @@
 void setup() {
   pinMode(13, OUTPUT);
+  pinMode(14, OUTPUT);
 }
 
 void loop() {
@@ -7,4 +8,9 @@ void loop() {
   delay(500);            // tunggu 1 detik
   digitalWrite(13, LOW);  // LED mati
   delay(500);
+
+  digitalWrite(14, LOW); // LED mati
+  delay(500);            // tunggu 1 detik
+  digitalWrite(14, LOW); // LED mati
+  delay(500);            // tunggu 1 detik
 }
